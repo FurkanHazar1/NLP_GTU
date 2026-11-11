@@ -1,0 +1,52 @@
+{
+  "overall": {
+    "model_a_macro_f1": 0.9654,
+    "model_b_macro_f1": 0.9393,
+    "observed_delta": 0.0261,
+    "ci_lower": 0.0207,
+    "ci_upper": 0.0317,
+    "ci_level": "95%",
+    "n_bootstraps": 10000,
+    "bootstrap_mean_delta": 0.0261,
+    "bootstrap_std_delta": 0.0028,
+    "p_value": 0.0,
+    "delta_min": 0.02,
+    "is_statistically_significant": true,
+    "exceeds_practical_threshold": true,
+    "both_criteria_met": true
+  },
+  "slices": {
+    "native_twitter": {
+      "model_a_macro_f1": 0.962,
+      "model_b_macro_f1": 0.9373,
+      "observed_delta": 0.0247,
+      "ci_lower": 0.0175,
+      "ci_upper": 0.032,
+      "ci_level": "95%",
+      "n_bootstraps": 10000,
+      "bootstrap_mean_delta": 0.0247,
+      "bootstrap_std_delta": 0.0037,
+      "p_value": 0.0,
+      "delta_min": 0.02,
+      "is_statistically_significant": true,
+      "exceeds_practical_threshold": true,
+      "both_criteria_met": true
+    },
+    "jigsaw": {
+      "model_a_macro_f1": 0.9688,
+      "model_b_macro_f1": 0.9397,
+      "observed_delta": 0.0291,
+      "ci_lower": 0.0206,
+      "ci_upper": 0.038,
+      "ci_level": "95%",
+      "n_bootstraps": 10000,
+      "bootstrap_mean_delta": 0.0292,
+      "bootstrap_std_delta": 0.0045,
+      "p_value": 0.0,
+      "delta_min": 0.02,
+      "is_statistically_significant": true,
+      "exceeds_practical_threshold": true,
+      "both_criteria_met": true
+    }
+  }
+}

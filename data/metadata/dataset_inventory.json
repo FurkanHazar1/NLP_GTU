@@ -1,0 +1,181 @@
+{
+  "inventory_version": "1.0",
+  "generated_at": "2026-11-10T23:55:00+03:00",
+  "team": "Team 07 - TOXICITY",
+  "project": "Explainable Turkish Implicit Toxicity Detection",
+  "datasets": {
+    "overfit_gm": {
+      "name": "Overfit-GM/turkish-toxic-language",
+      "source_url": "https://huggingface.co/datasets/Overfit-GM/turkish-toxic-language",
+      "platform": "Hugging Face",
+      "download_date": "2026-11-10T23:48:32+03:00",
+      "download_method": "huggingface_hub.snapshot_download",
+      "license": "Apache-2.0",
+      "task_category": "text-classification",
+      "language": "tr",
+      "files": [
+        {
+          "filename": "turkish_toxic_language.csv",
+          "relative_path": "data/raw/overfit_gm/turkish_toxic_language.csv",
+          "file_size_bytes": 18223058,
+          "sha256": "436aa9250d21d0617cb0aafdf77cad9c1aa85642d2b3fd1cd9d1aedab2d3fbc6",
+          "format": "csv"
+        },
+        {
+          "filename": "README.md",
+          "relative_path": "data/raw/overfit_gm/README.md",
+          "file_size_bytes": 1979,
+          "sha256": "481c9a6335bf3dfb676fef3a31c19b48b990f058097bc876378e04052cfdf7ec",
+          "format": "markdown"
+        }
+      ],
+      "record_count": 77800,
+      "columns": ["text", "target", "source", "is_toxic"],
+      "text_column": "text",
+      "label_column": "target",
+      "binary_label_column": "is_toxic",
+      "label_distribution": {
+        "OTHER": 37663,
+        "PROFANITY": 18252,
+        "INSULT": 10777,
+        "RACIST": 10163,
+        "SEXIST": 945
+      },
+      "binary_distribution": {
+        "1 (toxic)": 40137,
+        "0 (non-toxic)": 37663
+      },
+      "source_distribution": {
+        "told": 39551,
+        "jigsaw": 35624,
+        "bully": 2525,
+        "troff": 94,
+        "offenseval": 6
+      },
+      "missing_values": {
+        "text": 0,
+        "target": 0,
+        "source": 0,
+        "is_toxic": 0
+      },
+      "duplicate_rows": 0,
+      "duplicate_texts": 0,
+      "text_stats": {
+        "min_char_len": 2,
+        "median_char_len": 103.0,
+        "mean_char_len": 200.1,
+        "max_char_len": 9314,
+        "min_word_len": 1,
+        "median_word_len": 15.0,
+        "mean_word_len": 28.4,
+        "max_word_len": 1215,
+        "turkish_char_presence_pct": 93.8
+      }
+    },
+    "kaggle_tweets": {
+      "name": "smailsariteke/trke-tweetlerin-6-snfa-gre-etiketlenmesi",
+      "source_url": "https://www.kaggle.com/datasets/smailsariteke/trke-tweetlerin-6-snfa-gre-etiketlenmesi",
+      "platform": "Kaggle",
+      "download_date": "2026-11-10T23:48:53+03:00",
+      "download_method": "kagglehub.dataset_download (version 1)",
+      "license": "Open Data Commons Open Database License (ODbL) / Database: Open Database, Contents: Database Contents",
+      "language": "tr",
+      "files": [
+        {
+          "filename": "Veri_Seti_10000.xlsx",
+          "relative_path": "data/raw/kaggle_tweets/Veri_Seti_10000.xlsx",
+          "file_size_bytes": 593140,
+          "sha256": "b713c8efc748134c417d250bb7c27bd4ab652abb1955af2495108ccfdb41c22a",
+          "format": "xlsx"
+        }
+      ],
+      "record_count": 9999,
+      "columns": [
+        "Paylaşım",
+        "Tespit",
+        "Küfür",
+        "Tehdit",
+        "Hakaret",
+        "Dolandırıcılık",
+        "Cinsel İçerik",
+        "Irkçılık"
+      ],
+      "text_column": "Paylaşım",
+      "general_flag_column": "Tespit",
+      "label_columns": [
+        "Küfür",
+        "Tehdit",
+        "Hakaret",
+        "Dolandırıcılık",
+        "Cinsel İçerik",
+        "Irkçılık"
+      ],
+      "flag_distributions": {
+        "Tespit": {
+          "0.0 (Flagged/Toxic)": 5268,
+          "1.0 (Clean/Untargeted)": 4731
+        },
+        "Küfür": {
+          "0.0": 7984,
+          "1.0": 2015
+        },
+        "Tehdit": {
+          "0.0": 9660,
+          "1.0": 339
+        },
+        "Hakaret": {
+          "0.0": 7642,
+          "1.0": 2357
+        },
+        "Dolandırıcılık": {
+          "0.0": 9498,
+          "1.0": 501
+        },
+        "Cinsel İçerik": {
+          "0.0": 9201,
+          "1.0": 798
+        },
+        "Irkçılık": {
+          "0.0": 9352,
+          "1.0": 647
+        }
+      },
+      "composite_toxic_distribution": {
+        "any_toxic_flag_1": 4930,
+        "all_flags_0": 5069
+      },
+      "missing_values": {
+        "Paylaşım": 0,
+        "Tespit": 0,
+        "Küfür": 0,
+        "Tehdit": 0,
+        "Hakaret": 0,
+        "Dolandırıcılık": 0,
+        "Cinsel İçerik": 0,
+        "Irkçılık": 0
+      },
+      "duplicate_rows": 54,
+      "duplicate_texts": 63,
+      "text_stats": {
+        "min_char_len": 3,
+        "median_char_len": 64.0,
+        "mean_char_len": 75.0,
+        "max_char_len": 508,
+        "min_word_len": 1,
+        "median_word_len": 9.0,
+        "mean_word_len": 10.6,
+        "max_word_len": 68,
+        "turkish_char_presence_pct": 91.9
+      }
+    }
+  },
+  "cross_dataset_analysis": {
+    "total_raw_rows_combined": 87799,
+    "exact_text_matches": 2088,
+    "normalized_text_matches": 2088,
+    "internal_duplicates_kaggle": 63,
+    "estimated_unique_corpus_size": 85648,
+    "proposal_reported_size": 87800,
+    "discrepancy_explanation": "Proposal reported 87,800 by unverified addition of 77,800 + 10,000 without prior cross-source deduplication. The actual unique pool is ~85,648."
+  }
+}

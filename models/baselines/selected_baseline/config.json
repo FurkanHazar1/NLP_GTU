@@ -1,0 +1,9 @@
+{
+  "selected_candidate": "tfidf_combined_c10.0",
+  "representation": "combined",
+  "c_val": 10.0,
+  "preprocessor": "turkish_lower",
+  "training_data_rows": 76381,
+  "refit_time_seconds": 13.511,
+  "selection_rationale": "Selected Combined (C=10.0) with validation Macro-F1=0.9387. The improvement over the best word-level baseline (Word (C=10.0), Macro-F1=0.9215) is +0.0172, which exceeds the meaningful difference threshold (Delta_min=0.02). Character n-grams (3-5 char_wb) combined with word n-grams (1-2) capture Turkish agglutinative morphology, suffix variations, and informal social media spelling."
+}

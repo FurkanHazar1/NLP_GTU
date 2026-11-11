@@ -1,0 +1,31 @@
+{
+  "model_id": "dbmdz/bert-base-turkish-cased",
+  "revision": "b6e1de16c983e0f2c70664591ea3f22810072608",
+  "evaluation_timestamp": "2026-11-11T13:30:29.472628+00:00",
+  "test_eval_duration_seconds": 10.46,
+  "test_metrics": {
+    "accuracy": 0.9655,
+    "macro_f1": 0.9654,
+    "precision_clean": 0.9793,
+    "recall_clean": 0.9492,
+    "f1_clean": 0.964,
+    "precision_toxic": 0.9531,
+    "recall_toxic": 0.9809,
+    "f1_toxic": 0.9668,
+    "confusion_matrix": [
+      [
+        3927,
+        210
+      ],
+      [
+        83,
+        4265
+      ]
+    ],
+    "support_clean": 4137,
+    "support_toxic": 4348,
+    "support_total": 8485,
+    "pr_auc": 0.9854,
+    "roc_auc": 0.9906
+  }
+}

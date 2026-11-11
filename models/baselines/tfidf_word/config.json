@@ -1,0 +1,34 @@
+{
+  "id": "tfidf_word_c10.0",
+  "name": "Word (C=10.0)",
+  "representation": "word",
+  "c_val": 10.0,
+  "preprocessor": "turkish_lower",
+  "fit_time_seconds": 2.573,
+  "predict_time_seconds": 0.532,
+  "metrics": {
+    "accuracy": 0.9215,
+    "macro_f1": 0.9215,
+    "precision_clean": 0.8984,
+    "recall_clean": 0.9459,
+    "f1_clean": 0.9215,
+    "precision_toxic": 0.9458,
+    "recall_toxic": 0.8982,
+    "f1_toxic": 0.9214,
+    "confusion_matrix": [
+      [
+        5871,
+        336
+      ],
+      [
+        664,
+        5860
+      ]
+    ],
+    "support_clean": 6207,
+    "support_toxic": 6524,
+    "support_total": 12731,
+    "pr_auc": 0.9792,
+    "roc_auc": 0.9758
+  }
+}

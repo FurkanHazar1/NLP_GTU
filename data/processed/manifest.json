@@ -1,0 +1,100 @@
+{
+  "pipeline_version": "1.0.0",
+  "generated_at": "2026-11-11T12:12:58.437503+00:00",
+  "elapsed_seconds": 1.707694,
+  "random_seed": 42,
+  "raw_sources": {
+    "overfit_gm": {
+      "path": "data/raw/overfit_gm/turkish_toxic_language.csv",
+      "sha256": "436aa9250d21d0617cb0aafdf77cad9c1aa85642d2b3fd1cd9d1aedab2d3fbc6",
+      "record_count": 77800
+    },
+    "kaggle_tweets": {
+      "path": "data/raw/kaggle_tweets/Veri_Seti_10000.xlsx",
+      "sha256": "b713c8efc748134c417d250bb7c27bd4ab652abb1955af2495108ccfdb41c22a",
+      "record_count": 9999
+    }
+  },
+  "filtering_and_deduplication": {
+    "raw_total_records": 87799,
+    "scam_records_removed": 501,
+    "overfit_gm_internal_duplicates_removed": 111,
+    "kaggle_nonscam_internal_duplicates_removed": 71,
+    "cross_dataset_overlap_dropped_from_kaggle": 2248,
+    "quarantined_unique_keys": 2,
+    "quarantined_physical_rows": 4,
+    "retained_total_records": 84866
+  },
+  "class_distribution": {
+    "clean_count": 41376,
+    "toxic_count": 43490,
+    "clean_percentage": 48.75,
+    "toxic_percentage": 51.25
+  },
+  "partitions": {
+    "train": {
+      "count": 63650,
+      "clean_count": 31032,
+      "toxic_count": 32618,
+      "file": "data/processed/train.parquet"
+    },
+    "val": {
+      "count": 12731,
+      "clean_count": 6207,
+      "toxic_count": 6524,
+      "file": "data/processed/val.parquet"
+    },
+    "test": {
+      "count": 8485,
+      "clean_count": 4137,
+      "toxic_count": 4348,
+      "file": "data/processed/test.parquet"
+    }
+  },
+  "slices": {
+    "native_twitter": {
+      "train": 36872,
+      "val": 7375,
+      "test": 4916,
+      "total": 49163
+    },
+    "jigsaw": {
+      "train": 26702,
+      "val": 5341,
+      "test": 3560,
+      "total": 35603
+    },
+    "other_sources": {
+      "train": 76,
+      "val": 15,
+      "test": 9,
+      "total": 100
+    }
+  },
+  "checksums": {
+    "test_parquet_sha256": "1c5408bad5928752b39ee6471604954c4f93017ad5fe57b870c1cd49e0b479bd",
+    "test_membership_sha256": "7bd973c2e3bc33d5cc5f3010e631ea57fd62969e6a253c31d23a1d43de880174"
+  },
+  "schema": {
+    "columns": [
+      "record_id",
+      "text_raw",
+      "text_canonical",
+      "label_binary",
+      "source",
+      "source_group",
+      "target_original",
+      "split"
+    ],
+    "dtypes": {
+      "record_id": "str",
+      "text_raw": "str",
+      "text_canonical": "str",
+      "label_binary": "int64",
+      "source": "str",
+      "source_group": "str",
+      "target_original": "object",
+      "split": "str"
+    }
+  }
+}

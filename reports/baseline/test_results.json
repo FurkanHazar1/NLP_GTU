@@ -1,0 +1,31 @@
+{
+  "model_id": "tfidf_combined_c10.0",
+  "model_name": "Combined (C=10.0)",
+  "evaluation_timestamp": "2026-11-11T13:35:06.194845+00:00",
+  "test_eval_time_seconds": 2.227,
+  "test_metrics": {
+    "accuracy": 0.9393,
+    "macro_f1": 0.9393,
+    "precision_clean": 0.9255,
+    "recall_clean": 0.9521,
+    "f1_clean": 0.9386,
+    "precision_toxic": 0.9532,
+    "recall_toxic": 0.9271,
+    "f1_toxic": 0.94,
+    "confusion_matrix": [
+      [
+        3939,
+        198
+      ],
+      [
+        317,
+        4031
+      ]
+    ],
+    "support_clean": 4137,
+    "support_toxic": 4348,
+    "support_total": 8485,
+    "pr_auc": 0.9862,
+    "roc_auc": 0.9851
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "tfidf_char_c10.0",
+  "name": "Char (C=10.0)",
+  "representation": "char",
+  "c_val": 10.0,
+  "preprocessor": "turkish_lower",
+  "fit_time_seconds": 9.492,
+  "predict_time_seconds": 2.99,
+  "metrics": {
+    "accuracy": 0.9348,
+    "macro_f1": 0.9348,
+    "precision_clean": 0.9175,
+    "recall_clean": 0.9518,
+    "f1_clean": 0.9344,
+    "precision_toxic": 0.9525,
+    "recall_toxic": 0.9186,
+    "f1_toxic": 0.9352,
+    "confusion_matrix": [
+      [
+        5908,
+        299
+      ],
+      [
+        531,
+        5993
+      ]
+    ],
+    "support_clean": 6207,
+    "support_toxic": 6524,
+    "support_total": 12731,
+    "pr_auc": 0.9851,
+    "roc_auc": 0.9828
+  }
+}

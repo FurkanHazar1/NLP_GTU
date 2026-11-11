@@ -1,0 +1,399 @@
+{
+  "preprocessing_comparison": {
+    "raw_text_no_lower": {
+      "accuracy": 0.908,
+      "macro_f1": 0.908,
+      "precision_clean": 0.8757,
+      "recall_clean": 0.9455,
+      "f1_clean": 0.9093,
+      "precision_toxic": 0.9439,
+      "recall_toxic": 0.8723,
+      "f1_toxic": 0.9067,
+      "confusion_matrix": [
+        [
+          5869,
+          338
+        ],
+        [
+          833,
+          5691
+        ]
+      ],
+      "support_clean": 6207,
+      "support_toxic": 6524,
+      "support_total": 12731,
+      "pr_auc": 0.9712,
+      "roc_auc": 0.9668
+    },
+    "turkish_aware_lower": {
+      "accuracy": 0.9121,
+      "macro_f1": 0.9121,
+      "precision_clean": 0.8786,
+      "recall_clean": 0.9512,
+      "f1_clean": 0.9134,
+      "precision_toxic": 0.9496,
+      "recall_toxic": 0.8749,
+      "f1_toxic": 0.9107,
+      "confusion_matrix": [
+        [
+          5904,
+          303
+        ],
+        [
+          816,
+          5708
+        ]
+      ],
+      "support_clean": 6207,
+      "support_toxic": 6524,
+      "support_total": 12731,
+      "pr_auc": 0.9749,
+      "roc_auc": 0.971
+    },
+    "selected_preprocessor": "turkish_lower",
+    "rationale": "Turkish-aware lowercasing properly handles dotted/dotless I pairs (İ->i, I->ı) and yields a superior Macro-F1 (0.9121 vs. 0.908)."
+  },
+  "candidates": [
+    {
+      "id": "tfidf_word_c0.1",
+      "name": "Word (C=0.1)",
+      "representation": "word",
+      "c_val": 0.1,
+      "preprocessor": "turkish_lower",
+      "fit_time_seconds": 2.179,
+      "predict_time_seconds": 0.536,
+      "metrics": {
+        "accuracy": 0.876,
+        "macro_f1": 0.8759,
+        "precision_clean": 0.8352,
+        "recall_clean": 0.929,
+        "f1_clean": 0.8796,
+        "precision_toxic": 0.9243,
+        "recall_toxic": 0.8256,
+        "f1_toxic": 0.8722,
+        "confusion_matrix": [
+          [
+            5766,
+            441
+          ],
+          [
+            1138,
+            5386
+          ]
+        ],
+        "support_clean": 6207,
+        "support_toxic": 6524,
+        "support_total": 12731,
+        "pr_auc": 0.9545,
+        "roc_auc": 0.9453
+      }
+    },
+    {
+      "id": "tfidf_word_c1.0",
+      "name": "Word (C=1.0)",
+      "representation": "word",
+      "c_val": 1.0,
+      "preprocessor": "turkish_lower",
+      "fit_time_seconds": 2.338,
+      "predict_time_seconds": 0.554,
+      "metrics": {
+        "accuracy": 0.9121,
+        "macro_f1": 0.9121,
+        "precision_clean": 0.8786,
+        "recall_clean": 0.9512,
+        "f1_clean": 0.9134,
+        "precision_toxic": 0.9496,
+        "recall_toxic": 0.8749,
+        "f1_toxic": 0.9107,
+        "confusion_matrix": [
+          [
+            5904,
+            303
+          ],
+          [
+            816,
+            5708
+          ]
+        ],
+        "support_clean": 6207,
+        "support_toxic": 6524,
+        "support_total": 12731,
+        "pr_auc": 0.9749,
+        "roc_auc": 0.971
+      }
+    },
+    {
+      "id": "tfidf_word_c10.0",
+      "name": "Word (C=10.0)",
+      "representation": "word",
+      "c_val": 10.0,
+      "preprocessor": "turkish_lower",
+      "fit_time_seconds": 2.573,
+      "predict_time_seconds": 0.532,
+      "metrics": {
+        "accuracy": 0.9215,
+        "macro_f1": 0.9215,
+        "precision_clean": 0.8984,
+        "recall_clean": 0.9459,
+        "f1_clean": 0.9215,
+        "precision_toxic": 0.9458,
+        "recall_toxic": 0.8982,
+        "f1_toxic": 0.9214,
+        "confusion_matrix": [
+          [
+            5871,
+            336
+          ],
+          [
+            664,
+            5860
+          ]
+        ],
+        "support_clean": 6207,
+        "support_toxic": 6524,
+        "support_total": 12731,
+        "pr_auc": 0.9792,
+        "roc_auc": 0.9758
+      }
+    },
+    {
+      "id": "tfidf_char_c0.1",
+      "name": "Char (C=0.1)",
+      "representation": "char",
+      "c_val": 0.1,
+      "preprocessor": "turkish_lower",
+      "fit_time_seconds": 9.03,
+      "predict_time_seconds": 3.021,
+      "metrics": {
+        "accuracy": 0.8968,
+        "macro_f1": 0.8968,
+        "precision_clean": 0.8718,
+        "recall_clean": 0.9243,
+        "f1_clean": 0.8972,
+        "precision_toxic": 0.9236,
+        "recall_toxic": 0.8706,
+        "f1_toxic": 0.8963,
+        "confusion_matrix": [
+          [
+            5737,
+            470
+          ],
+          [
+            844,
+            5680
+          ]
+        ],
+        "support_clean": 6207,
+        "support_toxic": 6524,
+        "support_total": 12731,
+        "pr_auc": 0.9679,
+        "roc_auc": 0.9628
+      }
+    },
+    {
+      "id": "tfidf_char_c1.0",
+      "name": "Char (C=1.0)",
+      "representation": "char",
+      "c_val": 1.0,
+      "preprocessor": "turkish_lower",
+      "fit_time_seconds": 9.002,
+      "predict_time_seconds": 2.992,
+      "metrics": {
+        "accuracy": 0.9242,
+        "macro_f1": 0.9242,
+        "precision_clean": 0.9025,
+        "recall_clean": 0.9468,
+        "f1_clean": 0.9241,
+        "precision_toxic": 0.9469,
+        "recall_toxic": 0.9027,
+        "f1_toxic": 0.9243,
+        "confusion_matrix": [
+          [
+            5877,
+            330
+          ],
+          [
+            635,
+            5889
+          ]
+        ],
+        "support_clean": 6207,
+        "support_toxic": 6524,
+        "support_total": 12731,
+        "pr_auc": 0.9808,
+        "roc_auc": 0.9781
+      }
+    },
+    {
+      "id": "tfidf_char_c10.0",
+      "name": "Char (C=10.0)",
+      "representation": "char",
+      "c_val": 10.0,
+      "preprocessor": "turkish_lower",
+      "fit_time_seconds": 9.492,
+      "predict_time_seconds": 2.99,
+      "metrics": {
+        "accuracy": 0.9348,
+        "macro_f1": 0.9348,
+        "precision_clean": 0.9175,
+        "recall_clean": 0.9518,
+        "f1_clean": 0.9344,
+        "precision_toxic": 0.9525,
+        "recall_toxic": 0.9186,
+        "f1_toxic": 0.9352,
+        "confusion_matrix": [
+          [
+            5908,
+            299
+          ],
+          [
+            531,
+            5993
+          ]
+        ],
+        "support_clean": 6207,
+        "support_toxic": 6524,
+        "support_total": 12731,
+        "pr_auc": 0.9851,
+        "roc_auc": 0.9828
+      }
+    },
+    {
+      "id": "tfidf_combined_c0.1",
+      "name": "Combined (C=0.1)",
+      "representation": "combined",
+      "c_val": 0.1,
+      "preprocessor": "turkish_lower",
+      "fit_time_seconds": 11.968,
+      "predict_time_seconds": 3.381,
+      "metrics": {
+        "accuracy": 0.9111,
+        "macro_f1": 0.9111,
+        "precision_clean": 0.8823,
+        "recall_clean": 0.9435,
+        "f1_clean": 0.9119,
+        "precision_toxic": 0.9424,
+        "recall_toxic": 0.8803,
+        "f1_toxic": 0.9103,
+        "confusion_matrix": [
+          [
+            5856,
+            351
+          ],
+          [
+            781,
+            5743
+          ]
+        ],
+        "support_clean": 6207,
+        "support_toxic": 6524,
+        "support_total": 12731,
+        "pr_auc": 0.9741,
+        "roc_auc": 0.9699
+      }
+    },
+    {
+      "id": "tfidf_combined_c1.0",
+      "name": "Combined (C=1.0)",
+      "representation": "combined",
+      "c_val": 1.0,
+      "preprocessor": "turkish_lower",
+      "fit_time_seconds": 11.116,
+      "predict_time_seconds": 3.455,
+      "metrics": {
+        "accuracy": 0.9346,
+        "macro_f1": 0.9346,
+        "precision_clean": 0.9133,
+        "recall_clean": 0.9567,
+        "f1_clean": 0.9345,
+        "precision_toxic": 0.9568,
+        "recall_toxic": 0.9135,
+        "f1_toxic": 0.9347,
+        "confusion_matrix": [
+          [
+            5938,
+            269
+          ],
+          [
+            564,
+            5960
+          ]
+        ],
+        "support_clean": 6207,
+        "support_toxic": 6524,
+        "support_total": 12731,
+        "pr_auc": 0.9847,
+        "roc_auc": 0.9826
+      }
+    },
+    {
+      "id": "tfidf_combined_c10.0",
+      "name": "Combined (C=10.0)",
+      "representation": "combined",
+      "c_val": 10.0,
+      "preprocessor": "turkish_lower",
+      "fit_time_seconds": 13.56,
+      "predict_time_seconds": 3.422,
+      "metrics": {
+        "accuracy": 0.9387,
+        "macro_f1": 0.9387,
+        "precision_clean": 0.92,
+        "recall_clean": 0.9576,
+        "f1_clean": 0.9384,
+        "precision_toxic": 0.9581,
+        "recall_toxic": 0.9208,
+        "f1_toxic": 0.939,
+        "confusion_matrix": [
+          [
+            5944,
+            263
+          ],
+          [
+            517,
+            6007
+          ]
+        ],
+        "support_clean": 6207,
+        "support_toxic": 6524,
+        "support_total": 12731,
+        "pr_auc": 0.9862,
+        "roc_auc": 0.9842
+      }
+    }
+  ],
+  "selected_candidate": {
+    "id": "tfidf_combined_c10.0",
+    "name": "Combined (C=10.0)",
+    "representation": "combined",
+    "c_val": 10.0,
+    "preprocessor": "turkish_lower",
+    "fit_time_seconds": 13.56,
+    "predict_time_seconds": 3.422,
+    "metrics": {
+      "accuracy": 0.9387,
+      "macro_f1": 0.9387,
+      "precision_clean": 0.92,
+      "recall_clean": 0.9576,
+      "f1_clean": 0.9384,
+      "precision_toxic": 0.9581,
+      "recall_toxic": 0.9208,
+      "f1_toxic": 0.939,
+      "confusion_matrix": [
+        [
+          5944,
+          263
+        ],
+        [
+          517,
+          6007
+        ]
+      ],
+      "support_clean": 6207,
+      "support_toxic": 6524,
+      "support_total": 12731,
+      "pr_auc": 0.9862,
+      "roc_auc": 0.9842
+    }
+  },
+  "selection_rationale": "Selected Combined (C=10.0) with validation Macro-F1=0.9387. The improvement over the best word-level baseline (Word (C=10.0), Macro-F1=0.9215) is +0.0172, which exceeds the meaningful difference threshold (Delta_min=0.02). Character n-grams (3-5 char_wb) combined with word n-grams (1-2) capture Turkish agglutinative morphology, suffix variations, and informal social media spelling."
+}

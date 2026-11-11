@@ -1,0 +1,55 @@
+[project]
+name = "toxicity-detection"
+version = "0.1.0"
+description = "Explainable Turkish Implicit Toxicity Detection"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "accelerate",
+    "datasets",
+    "evaluate",
+    "huggingface-hub",
+    "joblib",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "psutil",
+    "pyyaml",
+    "safetensors",
+    "scikit-learn",
+    "scipy",
+    "seaborn",
+    "shap",
+    "torch",
+    "tqdm",
+    "transformers",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff",
+]
+notebook = [
+    "jupyterlab",
+    "ipykernel",
+    "ipywidgets",
+]
+data-acquisition = [
+    "kagglehub",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu124" },
+]
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
